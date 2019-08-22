@@ -1,0 +1,43 @@
+{% extends 'navbar.html'0 %}
+
+{% block title %}
+Registro
+{% endblock title %}
+
+{% block content %}
+<!DOCTYPE html>
+<a href="{% url 'index' %">Inicio</a>
+<html>
+<head>
+	<title>Registro</title>
+</head>
+<body>
+
+<form action="/" method="POST">
+<label for="name">Nombre Completo: </label>
+<input type="text" name="nombre" id="name" placeholder="Nombre y Apellidos">
+<br>
+<label for="age">Edad: </label>
+<input type="number" name="age" id="age" min="15" max="100" step="1" placeholder="Ex: 20">
+<br>
+<label for="email">e-mail: </label>
+<input type="email" name="email" id="email" placeholder="example1@ucursitos.com">
+<br>
+<label for="passw">Contraseña: </label>
+<input type="password" name="passw" id="passw" minlength="8" maxlength="15" placeholder="Entre 8 y 15 carácteres">
+<br>
+<label for="cargo">Cargo: </label>
+<select id="cargo" name="cargo">
+<option value="prof">Profesor</option>
+<option value="aux">Auxiliar</option>
+<option value="ayud">Ayudante</option>
+<option value="alum">Alumno</option>
+</select>
+<hr>
+<input type="submit" name="submit" value="Entrar" class="btn btn-primary">
+</form>
+</body>
+</html>
+
+
+{% endblock content %}
